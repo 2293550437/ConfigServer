@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: UserProvider
+  datasource:
+    url: jdbc:mysql://localhost:3306/java0909?serverTimezone=UTC
+    username: root
+    password: 111271
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  jpa:    #jpa生成表
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 9009
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7777/eureka,http://localhost:8888/eureka,http://localhost:9999/eureka
+version: UserProvider01
